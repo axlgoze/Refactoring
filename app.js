@@ -1,12 +1,3 @@
-const fs = require("fs");
-
-// Part 1 Read json file ===========================
-const rawdata = fs.readFileSync("explorers.json"); // te permite leer el contenido del archivo
-const explorers = JSON.parse(rawdata); //lista de explorers del archivo json, el método analiza en JSON
-
-//console.log("Hey! I'm here!")
-//console.log(explorers)
-
 
 // Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => explorer.mission == "node"); //crea un nuevo arreglo que cumpla con la condicion dada, mission="node"
