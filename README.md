@@ -314,3 +314,21 @@ classDiagram
     class FizzbuzzService
     FizzbuzzService : +applyValidationInExplorer(explorers, mission)
 ```
+
+4. Separando responsabilidad de leer archivo JSON
+```javascript
+const fs = require("fs")
+class Reader{
+        static readJsonFile(path){ //debe recibir una path del archivo a leer
+                //logica para leer archivo y retornar información
+                const rawdata = fs.readFileSync(path); //read json file
+                return JSON.parse(rawdata); //content into json
+        }
+}
+
+module.exports = Reader
+
+```
+
+5. Explorer Service
+
