@@ -32,8 +32,8 @@ la decisión de refactorizar el proyecto.
 
 #### Requerimiento 1
 
-Para realizar esta práctica se tuvó primero que entender primero el código,
-[Aquí](https://axlgoze.github.io/my_launchx_blog/posts/post_7/) puedes encontrar algunos conceptos que tuve que investigar durante la realizacion de este refactoring
+Para realizar esta práctica se tuvó que entender primero el código,
+[Aquí](https://axlgoze.github.io/my_launchx_blog/posts/post_7/) puedes encontrar algunos conceptos que tuve que investigar durante la realizacion de este refactoring. 🦇
 
 `código elaborado por consultoria externa:`
 
@@ -285,3 +285,32 @@ const explorersInNodeAndFizzBuzzTrick = explorersInNode.map((explorer) => assign
 ```  
   
 </details>
+
+# Parte 1 Refactoring
+
+Para dar una mejor estructura se requiere de la modularización del proyecto creando lo siguiente:
+
+Crearemos lo siguiente:
+- `Reader`: en esta clase necesitaremos un método static para leer el archivo y obtener la información dado el nombre archivo.
+- `ExplorerService`: aquí vamos poner tres métodos static para obtener lo que se necesita realizar con la lista de explorers. En este service vamos a realizar todas las operaciones de filtrado y mapeo que se necesiten.
+- `FizzbuzzService`: aquí haremos un método static para aplicar la validación sobre un explorer y agregarle el campo que se necesita.
+
+```mermaid
+classDiagram
+    class Reader
+    Reader : +readJsonFile(filePath)
+```
+
+```mermaid        
+classDiagram
+    class ExplorerService
+    ExplorerService : +filterByMission(explorers, mission)
+    ExplorerService : +getAmountOfExplorersByMission(explorers, mission)
+    ExplorerService : +getExplorersUsernamesByMission(explorers, mission)
+```
+
+```mermaid        
+classDiagram
+    class FizzbuzzService
+    FizzbuzzService : +applyValidationInExplorer(explorers, mission)
+```
