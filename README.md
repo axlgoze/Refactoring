@@ -33,7 +33,7 @@ la decisión de refactorizar el proyecto.
 #### Requerimiento 1
 
 Para realizar esta práctica se tuvó primero que entender primero el código,
-[Aquí]() puedes encontrar algunos conceptos que tuve que investigar durante la realizacion de este refactoring
+[Aquí](https://axlgoze.github.io/my_launchx_blog/posts/post_7/) puedes encontrar algunos conceptos que tuve que investigar durante la realizacion de este refactoring
 
 `código elaborado por consultoria externa:`
 
