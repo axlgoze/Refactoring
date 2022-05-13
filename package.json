@@ -4,7 +4,8 @@
   "description": "backend project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+    "test": "jest"
   },
   "author": "Axel Reyes",
   "license": "ISC",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/axlgoze/Refactoring/issues"
   },
-  "homepage": "https://github.com/axlgoze/Refactoring#readme"
+  "homepage": "https://github.com/axlgoze/Refactoring#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
 }
