@@ -11,9 +11,16 @@ describe("Unit test for explorer validation", ()=>{
 		expect(explorers[0].name).toBe("Woopa1")
 	});
 	test('1) probando metodo applyValidationInExplorer', ()=>{
-		const explorer1 = [{name: "Explorer1", score: 1}]
+		const explorer1 = {name: "Explorer1", score: 1}
 		//usando metodo applyValidationInExplorer
-		FizzbuzzService.applyValidationInExplorer(explorer1)
+		const explorerTrick= FizzbuzzService.applyValidationInExplorer(explorer1)
+		expect(explorer1.name).toBe("Explorer1")
 		expect(explorer1.score).toBe(1)
+	});
+	test('2) Validando trick:FIZZ', ()=>{
+		const explorer3 = {name: "Explorer3", score: 3}
+		const explorerTrickFizz= FizzbuzzService.applyValidationInExplorer(explorer3)
+		expect(explorer3.name).toBe("Explorer3")
+		expect(explorer3.score).toBe("FIZZ")
 	});
 })
