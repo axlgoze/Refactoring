@@ -4,9 +4,9 @@ describe("Test suite for FizzBuzz validation", () =>{
 		const resultOfSomething = 16+2
 		expect(resultOfSomething).toBe(18);
 	});
-	test("1) Filter by mission", () =>{
+	test("1) Read json file", () =>{
 		//código a probar
-		const explorerByMission = explorers.filter((explorer) => explorer.mission === mission)
+		const Reader = require('./../lib/utils/Reader')
 		//propiedad a probar __ valor que se espera obtener
 		expect(explorer.filterByMission("node")).toBe()
 
