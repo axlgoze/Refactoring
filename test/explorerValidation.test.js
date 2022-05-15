@@ -18,9 +18,9 @@ describe("Unit test for explorer validation", ()=>{
 		expect(explorer1.score).toBe(1)
 	});
 	test('2) Validando trick:FIZZ', ()=>{
-		const explorer3 = {name: "Explorer3", score: 3}
+		const explorer3 = {name: "Explorer3", score:3}
 		const explorerTrickFizz= FizzbuzzService.applyValidationInExplorer(explorer3)
-		expect(explorer3.name).toBe("Explorer3")
-		expect(explorer3.score).toBe("FIZZ")
+//		expect(explorerTrickFizz.name).toBe("Explorer3")
+		expect(explorer3.trick).toBe("FIZZ")
 	});
 })
