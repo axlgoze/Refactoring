@@ -10,10 +10,10 @@ describe("Unit test for explorer validation", ()=>{
 		//validamos que el código funcione de la manera esperada
 		expect(explorers[0].name).toBe("Woopa1")
 	});
-	test('1) Add setters', ()=>{
-		//lectura
-
+	test('1) probando metodo applyValidationInExplorer', ()=>{
+		const explorer1 = [{name: "Explorer1", score: 1}]
 		//usando metodo applyValidationInExplorer
-		const FizzbuzzService.applyValidationInExplorer = {name: "Explorer1", }
+		FizzbuzzService.applyValidationInExplorer(explorer1)
+		expect(explorer1.score).toBe(1)
 	});
 })

@@ -27,4 +27,11 @@ describe("Test suite for FizzBuzz validation", () =>{
 		//propiedad a probar __ valor que se espera obtener
 		expect(explorersAmountInJava).toBe(5)
 	});
+	test("4) Test de Carlo para probar ExploreerSErvice", () =>{
+		const explorers = [{mission: "node"}] //ya se que lo voy a recibir de parte del archivo JSON
+		const explorersInNode = ExplorerService.filterByMission(explorers, "node")
+		//propiedad a probar __ valor que se espera obtener
+		expect(explorersInNode.length).toBe(1)
+	});
+
 })
