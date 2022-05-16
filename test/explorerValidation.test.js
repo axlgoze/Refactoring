@@ -16,7 +16,7 @@ describe("Unit test for explorer validation", ()=>{
 		//usando metodo applyValidationInExplorer
 		const explorerTrick= FizzbuzzService.applyValidationInExplorer(explorer1)
 		expect(explorer1.name).toBe("Explorer1")
-		expect(explorer1.score).toBe(1)
+		expect(explorer1.score).toBe(12)
 	});
 	test('2) Validando trick:FIZZ', ()=>{
 		const explorer3 = {name: "Explorer3", score:3}
