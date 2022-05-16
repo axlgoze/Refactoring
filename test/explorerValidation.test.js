@@ -2,7 +2,7 @@ const ExplorerService = require('./../lib/services/ExplorerService')
 const FizzbuzzService = require('./../lib/services/FizzbuzzService')
 const Reader = require('./../lib/utils/Reader')
 describe("Unit test for explorer validation", ()=>{
-	test("0) Show first Explorer name", ()=>{
+	/*test("0) Show first Explorer name", ()=>{
 		//código que queremos usar tal cual
 		//Quiero mostrar  el nombre del primer explorer
 		const explorers = Reader.readJsonFile('explorers.json')
@@ -10,6 +10,7 @@ describe("Unit test for explorer validation", ()=>{
 		//validamos que el código funcione de la manera esperada
 		expect(explorers[0].name).toBe("Woopa1")
 	});
+	*/
 	test('1) probando metodo applyValidationInExplorer', ()=>{
 		const explorer1 = {name: "Explorer1", score: 1}
 		//usando metodo applyValidationInExplorer
@@ -26,5 +27,10 @@ describe("Unit test for explorer validation", ()=>{
 		const explorer5 = {name: "Explorer5", score:5}
 		const explorerTrickBuzz=FizzbuzzService.applyValidationInExplorer(explorer5)
 		expect(explorer5.trick).toBe("BUZZ")
+	});
+	test("4) Validando trick: FIZZBUZZ", ()=>{
+		const explorer15 = {name: "Explorer15", score:15}
+		const explorerTrickFizzBuzz=FizzbuzzService.applyValidationInExplorer(explorer15)
+		expect(explorer15.trick).toBe("FIZZBUZZ")
 	});
 })
