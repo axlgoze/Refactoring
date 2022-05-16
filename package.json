@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "server": "node server.js"
   },
   "author": "Axel Reyes",
   "license": "ISC",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/axlgoze/Refactoring#readme",
   "devDependencies": {
+    "eslint": "^8.15.0",
     "jest": "^26.0.0"
   }
 }
