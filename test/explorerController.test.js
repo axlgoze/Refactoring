@@ -15,10 +15,11 @@ describe("Test suite for explorerControll", ()=>{
 		expect(explorersInNode.length).toBe(2)
 	});
 	test("3) regresar lista de usernames de explorers filtrados por mision",()=>{
-		const explorersByMissionToGetUsernames = explorers.filter((explorer)=> explorer.mission === mission)
-		const usernamesByMission = explorersByMissionToGetUsernames.map((explorer)=> explorer.githubUsername)
-		expect(explorersInNode.length).toBe(2)
+		const explorersUsername = ExplorerService.getExplorersUsernameByMission(explorers,"java")
+		expect(explorersUsername.length).toBe(5)
 	});
-	
-
+	test("4) Regresar cantidad de explorers por mision",()=>{
+		const explorersAmountByMission = ExplorerService.getAmountOfExplorersByMission(explorers,"java")
+		expect(explorersAmountByMission).toBe(5)
+	});
 	})
