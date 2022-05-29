@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/axlgoze/Refactoring#readme",
   "devDependencies": {
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "jest": "^26.0.0"
   },
   "dependencies": {
