@@ -33,9 +33,4 @@ describe("Test suite for FizzBuzz validation", () =>{
         //propiedad a probar __ valor que se espera obtener
         expect(explorersInNode.length).toBe(1);
     });
-    test("5) Test for new functionality", ()=>{
-        const explorers = [{score: 1, trick:"Fizz"}]; //recibí estos valores
-//	const applyValidationInNumber
-	expect(explorers.score).toBe(1);
-    });
 });
