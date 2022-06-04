@@ -24,8 +24,8 @@ describe("Test suite for explorerControll", ()=>{
         expect(explorersAmountByMission).toBe(5);
     });
     test("5) Regresar score and trick de explorers por validacion por número",()=>{
-        const explorersValidationRequest = FizzbuzzService.applyValidationInNumber(15);
-        expect(explorersValidationRequest.trick).toBeDefined();
+        const explorersValidationRequest = FizzbuzzService.applyValidationInNumber(5);
+        expect(explorersValidationRequest.trick).toBe("Buzz");
     });
 
 });
