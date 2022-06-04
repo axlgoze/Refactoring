@@ -1,4 +1,5 @@
 const ExplorerService = require ("./../lib/services/ExplorerService");
+const FizzbuzzService = require('./../lib/services/FizzbuzzService');
 const Reader = require("./../lib/utils/Reader");
 const explorers = Reader.readJsonFile("explorers.json");
 
@@ -22,4 +23,9 @@ describe("Test suite for explorerControll", ()=>{
         const explorersAmountByMission = ExplorerService.getAmountOfExplorersByMission(explorers,"java");
         expect(explorersAmountByMission).toBe(5);
     });
+    test("5) Regresar score and trick de explorers por validacion por número",()=>{
+        const explorersValidationRequest = FizzbuzzService.applyValidationInNumber(15);
+        expect(explorersValidationRequest.trick).toBeDefined();
+    });
+
 });
