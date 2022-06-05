@@ -33,4 +33,11 @@ describe("Test suite for FizzBuzz validation", () =>{
         //propiedad a probar __ valor que se espera obtener
         expect(explorersInNode.length).toBe(1);
     });
+    test("5) Filter explorers by Stack", () =>{
+        const explorersInStack = explorers.filter((explorer)=>explorer.mission === "node");
+	const explorersAmountInStack=explorersInStack.length;
+        //propiedad a probar __ valor que se espera obtener
+        expect(explorersAmountInStack).toBe(10);
+    });
+
 });
