@@ -34,10 +34,12 @@ describe("Test suite for FizzBuzz validation", () =>{
         expect(explorersInNode.length).toBe(1);
     });
     test("5) Filter explorers by Stack", () =>{
-        const explorersInStack = explorers.filter((explorer)=>explorer.mission === "node");
-	const explorersAmountInStack=explorersInStack.length;
-        //propiedad a probar __ valor que se espera obtener
-        expect(explorersAmountInStack).toBe(10);
+	const explorersInStackE  = ExplorerService.getExplorersByStack(explorers,"elixir");
+	const explorersInStackG  = ExplorerService.getExplorersByStack(explorers,"groovy");
+	const explorersAmountInStackE = explorersInStackE.length;
+	const explorersAmountInStackG = explorersInStackG.length;
+        expect(explorersAmountInStackE).toBeDefined();
+        expect(explorersAmountInStackG).toBe(9);
     });
 
 });
