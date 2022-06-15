@@ -25,7 +25,7 @@ describe("Test suite for explorerControll", ()=>{
     });
     test("5) Regresar score and trick de explorers por validacion por número",()=>{
         const explorersValidationRequest = FizzbuzzService.applyValidationInNumber(5);
-        expect(explorersValidationRequest.trick).toBe("Buzz");
+        expect(explorersValidationRequest).toBe("BUZZ");
     });
     test("6) Regresar lista de explorers by stack",()=>{
         const ListExplorersByStack = ExplorerService.getExplorersByStack(explorers,"reasonML");
