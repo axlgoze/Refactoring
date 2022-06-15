@@ -8,6 +8,10 @@ describe("Test suite for new functionality", ()=>{
 		expect(explorerRequest).toBe("FIZZ");
 //		expect(explorerRequest.score).toBe(5);
 	});
-
+	test("Telegram message validation", ()=>{
+		const fizzbuzzTricks = "3";
+		const fizzbuzzTrick =  FizzbuzzService.messageBotValidation(fizzbuzzTricks);
+		expect(fizzbuzzTrick).toBe(3);
+	});
 })
 
