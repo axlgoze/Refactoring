@@ -5,7 +5,7 @@ describe("Test suite for new functionality", ()=>{
 //		const explorerScore= explorer.score;
 		const explorerRequest = FizzbuzzService.applyValidationInNumber(9);
 //		const explorerTrick = explorerRequest.trick;
-		expect(explorerRequest.trick).toBe("Fizz");
+		expect(explorerRequest).toBe("FIZZ");
 //		expect(explorerRequest.score).toBe(5);
 	});
 
