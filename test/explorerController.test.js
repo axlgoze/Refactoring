@@ -31,17 +31,5 @@ describe("Test suite for explorerControll", ()=>{
         const ListExplorersByStack = ExplorerService.getExplorersByStack(explorers,"reasonML");
         expect(ListExplorersByStack).toBeDefined();
     });
-    test("7) Validar mensaje recibido de Telegram",()=>{
-	//const Trick = FizzbuzzService.notaNumberValidation(3);
-	let msg = "";
-	const trickRecived = 3;
-	const numberToApllyFb = parseInt(trickRecived);
-	if(!isNaN(trickRecived)){
-		msg = "mensaje valido"
-	}else{
-	 	msg = "Envía mensaje Valido"
-	 }
-	expect(msg).toBe("mensaje valido");
-    });
 
 });

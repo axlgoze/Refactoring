@@ -41,5 +41,4 @@ describe("Test suite for FizzBuzz validation", () =>{
         expect(explorersAmountInStackE).toBeDefined();
         expect(explorersAmountInStackG).toBe(9);
     });
-
 });
